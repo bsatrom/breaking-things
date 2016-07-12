@@ -4,7 +4,7 @@ email: hello@breakingthings.io
 description: > # Writer Theme is a responsive template
  focussed on typography, minimal design and
   quality photography built using the Jekyll platform.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "breakingthings.io" # the base hostname & protocol for your site
 enable_retina: false
 permalink: :title
