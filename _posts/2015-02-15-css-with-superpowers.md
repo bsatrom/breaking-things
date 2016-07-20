@@ -3,9 +3,9 @@ layout: post-sidebar
 title: "CSS with Superpowers"
 date: 2015-02-11 08:50:28
 categories: coding css
-author_name : Michelle Jones
-author_url : /author/michelle
-author_avatar: michelle
+author_name : Brandon Satrom
+author_url : /author/brandon
+author_avatar: brandon
 show_avatar : true
 read_time : 34
 feature_image: feature-fire

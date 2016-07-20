@@ -2,9 +2,9 @@
 layout: post-sidebar
 date: 2015-02-10
 categories: motivation storytime
-author_name : Fred Smith
-author_url : /author/fred
-author_avatar: fred
+author_name : Brandon Satrom
+author_url : /author/brandon
+author_avatar: brandon
 show_avatar : true
 read_time : 09
 feature_image: feature-water

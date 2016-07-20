@@ -3,9 +3,9 @@ layout: post-sidebar
 date: 2015-02-10
 title: "Why React JS Will Change the World"
 categories: coding js
-author_name : Dan Robberts
-author_url : /author/dan
-author_avatar: dan
+author_name : Brandon Satrom
+author_url : /author/brandon
+author_avatar: brandon
 show_avatar : true
 read_time : 22
 feature_image: feature-water
