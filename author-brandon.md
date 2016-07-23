@@ -1,15 +1,22 @@
 ---
-layout: author
-title: Author
+title: Brandon Satrom
 permalink: author/brandon/
+layout: author
 feature_image: feature-wolf
 author_avatar: brandon
 author_name: Brandon Satrom
-title: Brandon Satrom
 fav_posts:
-  post_1 : ['Supercharge Your Workflow With Grunt', 'supercharge-your-workflow-with-grunt/', 'The Grunt ecosystem is huge and it’s growing every day. With literally hundreds of plugins to choose from, you can use Grunt to automate just about anything with a minimum of effort. ']
-  post_2 : ['Why React JS Will Change the World', 'why-react-js-will-change-the-world/', 'React components implement a render() method that takes input data and returns what to display.']
-
+  post_1:
+  - Supercharge Your Workflow With Grunt
+  - supercharge-your-workflow-with-grunt/
+  - 'The Grunt ecosystem is huge and it’s growing every day. With literally hundreds
+    of plugins to choose from, you can use Grunt to automate just about anything with
+    a minimum of effort. '
+  post_2:
+  - Why React JS Will Change the World
+  - why-react-js-will-change-the-world/
+  - React components implement a render() method that takes input data and returns
+    what to display.
 ---
 
 # Brandon Satrom

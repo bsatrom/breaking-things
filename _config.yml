@@ -1,21 +1,43 @@
-# Site settings
+---
 title: BreakingThings
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 email: hello@breakingthings.io
-description: > # BreakingThings.io is the personal and semi-professional blog of Brandon Satrom, a tinkerer and aspiring maker.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "breakingthings.io" # the base hostname & protocol for your site
+description: ''
+baseurl: ''
+url: breakingthings.io
 enable_retina: false
 permalink: :title
 nav_list:
-  Home : ['Home', '/', 'fa-home']
-  About : ['About', '/about', 'fa-anchor']
-  Contact : ['Contact', '/contact', 'fa-plane']
-  Author : ['Author', '/author/brandon', 'fa-user']
-single_footer: '<p>All your things are belong to us. Breaking Things &copy; 2016 <a href="/">latest posts</a></p>'
+  Home:
+  - Home
+  - "/"
+  - fa-home
+  About:
+  - About
+  - "/about"
+  - fa-anchor
+  Contact:
+  - Contact
+  - "/contact"
+  - fa-plane
+  Author:
+  - Author
+  - "/author/brandon"
+  - fa-user
+single_footer: <p>All your things are belong to us. Breaking Things &copy; 2016 <a
+  href="/">latest posts</a></p>
 footer_links:
-    About: ['About', '/about']
-    Writer: ['Brandon Satrom - 2016', '/about']
-
-
-# Build settings
+  About:
+  - About
+  - "/about"
+  Writer:
+  - Brandon Satrom - 2016
+  - "/about"
 markdown: kramdown

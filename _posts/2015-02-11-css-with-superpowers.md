@@ -1,13 +1,15 @@
 ---
+title: CSS with Superpowers
+date: 2015-02-11 08:50:28 Z
+categories:
+- coding
+- css
 layout: post-sidebar
-title: "CSS with Superpowers"
-date: 2015-02-11 08:50:28
-categories: coding css
-author_name : Brandon Satrom
-author_url : /author/brandon
+author_name: Brandon Satrom
+author_url: "/author/brandon"
 author_avatar: brandon
-show_avatar : true
-read_time : 34
+show_avatar: true
+read_time: 34
 feature_image: feature-fire
 show_related_posts: true
 square_related: recommend-fire

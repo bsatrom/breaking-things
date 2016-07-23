@@ -1,16 +1,21 @@
 ---
+title: You Dont Have To Be Great To Get Started
+date: 2015-02-10 00:00:00 Z
+categories:
+- motivation
+- leadership
+- journey
 layout: post-sidebar
-date: 2015-02-10
-categories: motivation leadership journey
-author_name : Brandon Satrom
-author_url : /author/brandon
+author_name: Brandon Satrom
+author_url: "/author/brandon"
 author_avatar: brandon
-show_avatar : true
-read_time : 16
+show_avatar: true
+read_time: 16
 feature_image: feature-san-fran
 show_related_posts: true
 square_related: recommend-san-fran
-social-message: Great post over at Writer Theme - You dont have to be great to get started
+social-message: Great post over at Writer Theme - You dont have to be great to get
+  started
 ---
 
 It was a cold December morning, as I sat out on my porch I decided today was the day.

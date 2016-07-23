@@ -1,12 +1,15 @@
 ---
+title: Stop Thinking And Start Doing
+date: 2015-02-10 00:00:00 Z
+categories:
+- motivation
+- storytime
 layout: post-sidebar
-date: 2015-02-10
-categories: motivation storytime
-author_name : Brandon Satrom
-author_url : /author/brandon
+author_name: Brandon Satrom
+author_url: "/author/brandon"
 author_avatar: brandon
-show_avatar : true
-read_time : 09
+show_avatar: true
+read_time: 09
 feature_image: feature-water
 show_related_posts: false
 square_related: recommend-spain

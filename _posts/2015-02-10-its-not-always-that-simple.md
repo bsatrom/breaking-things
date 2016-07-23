@@ -1,12 +1,14 @@
 ---
+title: Its Not Always That Simple
+date: 2015-02-10 00:00:00 Z
+categories:
+- motivation
 layout: post-sidebar
-date: 2015-02-10
-categories: motivation
-author_name : Brandon Satrom
-author_url : /author/brandon
+author_name: Brandon Satrom
+author_url: "/author/brandon"
 author_avatar: brandon
-show_avatar : true
-read_time : 14
+show_avatar: true
+read_time: 14
 feature_image: feature-book
 show_related_posts: true
 square_related: recommend-sunset

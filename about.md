@@ -1,7 +1,7 @@
 ---
-layout: page
 title: About BreakingThings.io
-permalink: /about/
+permalink: "/about/"
+layout: page
 feature_image: feature-fire
 ---
 
