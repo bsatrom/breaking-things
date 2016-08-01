@@ -1,9 +1,9 @@
 ---
 title: contact
 permalink: "/contact/"
-layout: contact
-feature_image: feature-laptop
+feature_image: feature-robot
 form_action: 
 form_heading: Contact our Team
+layout: contact
 ---
 
