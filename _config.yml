@@ -1,6 +1,6 @@
 ---
 title: BreakingThings
-timezone: UTC
+timezone: America/Chicago
 collections:
   posts:
     title: Posts
@@ -9,11 +9,11 @@ collections:
     title: Uploads
     output: true
 email: hello@breakingthings.io
-description: ''
-baseurl: ''
+description: 
+baseurl: 
 url: breakingthings.io
 enable_retina: false
-permalink: :title
+permalink: title
 nav_list:
   Home:
   - Home
