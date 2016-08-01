@@ -1,8 +1,8 @@
 ---
 title: About BreakingThings.io
 permalink: "/about/"
+feature_image: feature-soldering
 layout: page
-feature_image: feature-fire
 ---
 
 BreakingThings.io is the personal and semi-professional blog of [Brandon Satrom](/author/brandon). 
