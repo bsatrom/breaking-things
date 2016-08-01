@@ -1,12 +1,16 @@
 ---
+title: A Great Story Never Told
+date: 2015-02-09 18:00:00 -06:00
+categories:
+- storytime
+- life
+- journey
 layout: post
-date: 2015-02-10
-categories: storytime life journey
-author_name : Brandon Satrom
-author_url : /author/brandon
+author_name: Brandon Satrom
+author_url: "/author/brandon"
 author_avatar: brandon
-show_avatar : true
-read_time : 12
+show_avatar: true
+read_time: 12
 feature_image: feature-wolf
 show_related_posts: true
 square_related: recommend-woods

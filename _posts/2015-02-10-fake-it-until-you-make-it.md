@@ -1,12 +1,14 @@
 ---
+title: Fake It Until You Make It
+date: 2015-02-09 18:00:00 -06:00
+categories:
+- motivation
 layout: post-sidebar
-date: 2015-02-10
-categories: motivation
-author_name : Brandon Satrom
-author_url : /author/brandon
+author_name: Brandon Satrom
+author_url: "/author/brandon"
 author_avatar: brandon
-show_avatar : true
-read_time : 22
+show_avatar: true
+read_time: 22
 feature_image: feature-water
 show_related_posts: true
 square_related: recommend-iceland

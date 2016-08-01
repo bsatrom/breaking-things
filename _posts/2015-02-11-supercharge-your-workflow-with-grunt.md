@@ -1,12 +1,15 @@
 ---
+title: Supercharge Your Workflow With Grunt
+date: 2015-02-11 02:50:28 -06:00
+categories:
+- coding
+- js
 layout: post
-date: 2015-02-11 08:50:28
-categories: coding js
-author_name : Brandon Satrom
-author_url : /author/brandon
+author_name: Brandon Satrom
+author_url: "/author/brandon"
 author_avatar: brandon
-show_avatar : true
-read_time : 34
+show_avatar: true
+read_time: 34
 feature_image: feature-laptop
 show_related_posts: true
 square_related: recommend-laptop
