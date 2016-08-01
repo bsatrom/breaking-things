@@ -1,8 +1,7 @@
 ---
 title: Brandon Satrom
 permalink: author/brandon/
-layout: author
-feature_image: feature-wolf
+feature_image: feature-mill
 author_avatar: brandon
 author_name: Brandon Satrom
 fav_posts:
@@ -17,6 +16,7 @@ fav_posts:
   - why-react-js-will-change-the-world/
   - React components implement a render() method that takes input data and returns
     what to display.
+layout: author
 ---
 
 # Brandon Satrom
