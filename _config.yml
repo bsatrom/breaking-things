@@ -9,10 +9,15 @@ collections:
     title: Uploads
     output: true
 email: hello@breakingthings.io
-description: 
+description: "BreakingThings.io is the personal and semi-professional blog of [Brandon
+  Satrom](/author/brandon). \n\nAn aspiring and self-described maker, Brandon typically
+  writes about the topics capturing his interest and consuming too much of his time,
+  from software & micro-controllers, to CNC milling & prototyping hardware. Pretty
+  much anything and everything Brandon uncovers on his journey to break things in
+  the process of creating something new."
 baseurl: 
 url: breakingthings.io
-enable_retina: false
+enable_retina: true
 permalink: title
 nav_list:
   Home:
@@ -28,7 +33,7 @@ nav_list:
   - "/contact"
   - fa-plane
   Author:
-  - Author
+  - Brandon Satrom
   - "/author/brandon"
   - fa-user
 single_footer: <p>All your things are belong to us. Breaking Things &copy; 2016 <a

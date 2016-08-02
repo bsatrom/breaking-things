@@ -26,3 +26,5 @@ Brandon Satrom is the Vice President for Strategy & Innovation at Progress Softw
 Brandon has spoken at national, international and online events, and he loves hanging out with and learning from passionate designers and developers. He is the author of two books, the latest being "Building Polyfills" from O'Reilly. 
 
 Brandon lives in Austin, TX with his wife, Sarah, and three sons, Benjamin, Jack and Matthew.
+
+Brandon can be found on Twitter as [@BrandonSatrom](http://twitter.com/brandonsatrom) and on [Facebook](http://facebook.com/brandon.satrom) as well.
