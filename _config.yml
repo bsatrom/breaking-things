@@ -12,7 +12,7 @@ email: hello@breakingthings.io
 description: 
 baseurl: 
 url: breakingthings.io
-enable_retina: false
+enable_retina: true
 permalink: title
 nav_list:
   Home:
@@ -28,7 +28,7 @@ nav_list:
   - "/contact"
   - fa-plane
   Author:
-  - Author
+  - Brandon Satrom
   - "/author/brandon"
   - fa-user
 single_footer: <p>All your things are belong to us. Breaking Things &copy; 2016 <a
