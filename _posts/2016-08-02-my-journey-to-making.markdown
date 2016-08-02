@@ -9,7 +9,15 @@ tags:
 - making
 - kids
 - education
-Field name: 
+layout: post-sidebar
+author_name: Brandon Satrom
+author_url: "/author/brandon"
+author_avatar: brandon
+show_avatar: true
+read_time: 4
+feature_image: feature-soldering
+show_related_posts: true
+square_related: recommend-soldering
 ---
 
  > Let the beauty of what you love be what you do. - Rumi
