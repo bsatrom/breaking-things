@@ -17,7 +17,7 @@ description: "BreakingThings.io is the personal and semi-professional blog of [B
   the process of creating something new."
 baseurl: 
 url: breakingthings.io
-enable_retina: true
+enable_retina: false
 permalink: title
 nav_list:
   Home:
