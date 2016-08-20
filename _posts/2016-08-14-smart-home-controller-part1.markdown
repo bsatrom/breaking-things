@@ -23,7 +23,7 @@ feature_image: feature-blueprint
 show_related_posts: true
 square_related: recommend-blueprint
 ---
- 
+
 Several months ago, I decided to build my own smart home controller. My reasons are many, and I'll detail a few in a future post or two, but suffice to say that I wanted complete control over the devices in my home, and do not want to bring in an appliance rife with DRM that may one day turn into an expensive, dead plastic box.
 
 I'm at the beginning of my journey, but my aspiration is to build something that others can also use and build upon, which is why I and a few others started the [Rosie project](https://github.com/rosie-home) on GitHub. More on Rosie in a future post as well.

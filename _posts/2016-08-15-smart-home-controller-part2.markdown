@@ -23,7 +23,7 @@ feature_image: feature-blueprint
 show_related_posts: true
 square_related: recommend-blueprint
 ---
- 
+
 Several months ago, I decided to build my own smart home controller. In [Part 1](http://breakingthings.io/posts/smart-home-controller-part1) of this series, I detailed the process for setting up the Smart Home Respository.
 In this post, I'll cover setting up the Gateway.
 
