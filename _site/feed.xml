@@ -7,17 +7,14 @@
 An aspiring and self-described maker, Brandon typically writes about the topics capturing his interest and consuming too much of his time, from software &amp; micro-controllers, to CNC milling &amp; prototyping hardware. Pretty much anything and everything Brandon uncovers on his journey to break things in the process of creating something new.</description>
     <link>breakingthings.io/</link>
     <atom:link href="breakingthings.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 16 Aug 2016 10:14:35 -0500</pubDate>
-    <lastBuildDate>Tue, 16 Aug 2016 10:14:35 -0500</lastBuildDate>
+    <pubDate>Sat, 20 Aug 2016 01:08:41 -0500</pubDate>
+    <lastBuildDate>Sat, 20 Aug 2016 01:08:41 -0500</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
         <title>Building Your Own Smart Home Controller - Part 2, The Gateway</title>
-        <description>&lt;p&gt;Several months ago, I decided to build my own smart home controller. My reasons are many, and I’ll detail a few in a future post or two, but suffice to say that I wanted complete control over the devices in my home, and do not want to bring in an appliance rife with DRM that may one day turn into an expensive, dead plastic box.&lt;/p&gt;
-
-&lt;p&gt;I’m at the beginning of my journey, but my aspiration is to build something that others can also use and build upon, which is why I and a few others started the &lt;a href=&quot;https://github.com/rosie-home&quot;&gt;Rosie project&lt;/a&gt; on GitHub. More on Rosie in a future post as well.&lt;/p&gt;
-
-&lt;p&gt;Over the last few months, I’ve spent many, many, many hours getting my gateway and hub set-up with the right software and some basic flows. My hope is that these instructions save you some time if you decide to undertake this for yourself.&lt;/p&gt;
+        <description>&lt;p&gt;Several months ago, I decided to build my own smart home controller. In &lt;a href=&quot;http://breakingthings.io/posts/smart-home-controller-part1&quot;&gt;Part 1&lt;/a&gt; of this series, I detailed the process for setting up the Smart Home Respository.
+In this post, I’ll cover setting up the Gateway.&lt;/p&gt;
 
 &lt;p&gt;This post does duplicate much of the instructions I’ve provided in the &lt;a href=&quot;https://github.com/rosie-home/rosie-gateway&quot;&gt;Rosie-Gateway repo&lt;/a&gt;, though I wil provide a bit more context and explanation for those of you who like a bit more prose with your software setup instructions.&lt;/p&gt;
 
@@ -355,11 +352,410 @@ systemctl start telegraf
 &lt;/div&gt;
 
 &lt;p&gt;And that’s that! You now have a smart home gateway, ready to facilitate all of your futuristic interactions!&lt;/p&gt;
-
 </description>
-        <pubDate>Tue, 02 Aug 2016 13:35:00 -0500</pubDate>
+        <pubDate>Mon, 15 Aug 2016 13:35:00 -0500</pubDate>
         <link>breakingthings.io/posts/smart-home-controller-part2</link>
         <guid isPermaLink="true">breakingthings.io/posts/smart-home-controller-part2</guid>
+        
+        <category>smart-home</category>
+        
+        <category>home-controller</category>
+        
+        <category>BYO</category>
+        
+        <category>particle</category>
+        
+        <category>software</category>
+        
+        <category>hardware</category>
+        
+        <category>samsung-artik</category>
+        
+        
+        <category>smart-home</category>
+        
+      </item>
+    
+      <item>
+        <title>Building Your Own Smart Home Controller - Part 1, The Repository</title>
+        <description>&lt;p&gt;Several months ago, I decided to build my own smart home controller. My reasons are many, and I’ll detail a few in a future post or two, but suffice to say that I wanted complete control over the devices in my home, and do not want to bring in an appliance rife with DRM that may one day turn into an expensive, dead plastic box.&lt;/p&gt;
+
+&lt;p&gt;I’m at the beginning of my journey, but my aspiration is to build something that others can also use and build upon, which is why I and a few others started the &lt;a href=&quot;https://github.com/rosie-home&quot;&gt;Rosie project&lt;/a&gt; on GitHub. More on Rosie in a future post as well.&lt;/p&gt;
+
+&lt;p&gt;Over the last few months, I’ve spent many, many, many hours getting my gateway and repository set-up with the right software and some basic flows. My hope is that these instructions save you some time if you decide to undertake this for yourself.&lt;/p&gt;
+
+&lt;p&gt;This post does duplicate much of the instructions I’ve provided in the &lt;a href=&quot;https://github.com/rosie-home/rosie-repository&quot;&gt;Rosie-Repository repo&lt;/a&gt;, though I wil provide a bit more context and explanation for those of you who like a bit more prose with your software setup instructions.&lt;/p&gt;
+
+&lt;p&gt;This is a longer, but skimmable post. I’ve even included a handy TOC for the jump-arounders among you:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#rosie-architecture&quot;&gt;Rosie Architecture&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#role-of-the-repository&quot;&gt;Role of the Repository&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#installing-influxdb&quot;&gt;Installing InfluxDB&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#installing-telegraf&quot;&gt;Installing Telegraf&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#installing-grafana&quot;&gt;Installing Grafana&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#auto-starting-services&quot;&gt;Auto-Starting Services&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;rosie-architecture&quot;&gt;Rosie Architecture&lt;/h2&gt;
+
+&lt;p&gt;The Rosie system, as I’m calling it now, consists of two major pieces of hardware in your home:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;A Gateway, which facilitates all messages from and communication between connected devices&lt;/li&gt;
+  &lt;li&gt;A Repository, which handles data storage, events and vizualizations&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;role-of-the-repository&quot;&gt;Role of the Repository&lt;/h2&gt;
+
+&lt;p&gt;The Repository is, as it sounds, the storage system for Rosie. It hosts the system databse, manages events and notifications, and provides dashboards of home data.&lt;/p&gt;
+
+&lt;p&gt;On the hardware side, the choice of hardware is largely up to you, though I recommend using a Raspberry Pi 3 with at least a 64GB Class 10 SD card.&lt;/p&gt;
+
+&lt;p&gt;On the software side, the Rosie Repository relies on three primary software packages to do its work:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://influxdata.com/time-series-platform/influxdb/&quot;&gt;InfluxDB&lt;/a&gt;, the primary database for the system&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://influxdata.com/time-series-platform/telegraf/&quot;&gt;Telegraf&lt;/a&gt;, which collects metrics about my repository and saves those to InfluxDB&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://influxdata.com/time-series-platform/telegraf/&quot;&gt;Grafana&lt;/a&gt;, which hosts realtime dashboards for home data hosted in InfluxDB&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The instructions below assume you’re installing this software on a Raspberry Pi 3 running Debian. If your hardware or OS is different, be sure to inspect the instructions below to note OS differences, which would likely manifest either in the package manager used or the platform architecture (ARM is assumed below).&lt;/p&gt;
+
+&lt;h2 id=&quot;installing-influxdb&quot;&gt;Installing InfluxDB&lt;/h2&gt;
+
+&lt;p&gt;One of the biggest challenges I had getting my repository up and running was getting InfluxDB and Telegraf installed on the system. I tried using the prepackaged binaries provided on the InfluxDB website, but 
+these didn’t work for me, so I ended up building from source myself, which took a bit of doing. Hopefully these instructions will save you some time if you choose to do the same.&lt;/p&gt;
+
+&lt;p&gt;You’ll need to start by updating some fo the default software.&lt;/p&gt;
+
+&lt;h3 id=&quot;install-nodejs-and-npm&quot;&gt;Install Node.js and NPM&lt;/h3&gt;
+
+&lt;p&gt;Raspbian already has node 0.10.29, but not npm. You can save yourself some headaches by 
+grabbing a newer version of both.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Start with fetching the latest package list from your manager.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo apt-get update
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Install some essential build tools we need, then node and npm&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo apt-get install build-essential
+ sudo apt-get install nodejs
+ sudo apt-get install npm
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Now create a symlink to your new version of node&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo ln -s /usr/bin/nodejs/usr/bin/node
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;install-go&quot;&gt;Install Go&lt;/h3&gt;
+
+&lt;p&gt;To build InfluxDB (as well as Telegraf and Grafana) from source, you will need &lt;a href=&quot;https://golang.org/&quot;&gt;Go&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Start by installing bison and the Go Version Manager (gvm)&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo apt-get install bison
+ wget https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer
+ chmod +x gvm-installer
+ ./gvm-installer
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Versions of Go installed will be saved to &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.gvm/scripts/gvm&lt;/code&gt;.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;You’ll want Go 1.6, but due to a bug in the 1.6 installer, will need to install version 1.4.3 first.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; gvm install go1.4.3
+ gvm use go1.4.3
+ export GOROOT_BOOTSTRAP=$GOROOT
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Once you have 1.4.3, install Go 1.6.2&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; gvm install go1.6.2
+ gvm use go1.6.2 --default
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;install-influxdb&quot;&gt;Install InfluxDB&lt;/h3&gt;
+
+&lt;p&gt;Prerequisites done, it’s now time for the good stuff. Almost…&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Install a couple of additional dependencies before grabbing the Go source.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo apt-get install ruby-dev
+ sudo gem install fpm
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Download and build InfluxDB from source&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; go get github.com/influxdata/influxdb
+ cd $GOPATH/src/github.com/influxdata/influxdb/
+ ./build.py --package --version=0.13.0 --arch=armhf
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Setting the &lt;code class=&quot;highlighter-rouge&quot;&gt;arch&lt;/code&gt; flag to &lt;code class=&quot;highlighter-rouge&quot;&gt;armhf&lt;/code&gt; is critical for installing InfluxDB on ARM devices like the Pi.&lt;/p&gt;
+
+&lt;p&gt;When you execute the Python build script, you might get a (non-fatal) error message. You can ignore this.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Finally, install InfluxDB. Note that the exact name of your &lt;code class=&quot;highlighter-rouge&quot;&gt;deb&lt;/code&gt; package might differ from the one below. check the &lt;code class=&quot;highlighter-rouge&quot;&gt;build&lt;/code&gt; directory to get the exact name.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo dpkg -i build/influxdb_0.13.0~4254ad3_armhf.deb
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;To see if things worked, run the &lt;code class=&quot;highlighter-rouge&quot;&gt;influxd&lt;/code&gt; command and then &lt;code class=&quot;highlighter-rouge&quot;&gt;influx&lt;/code&gt;. You should jump into the InfluxDB cli once the latter command is issued.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/post-images/influx.png&quot; alt=&quot;InfluxDB Running via a terminal&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that InfluxDB is up, lets jump to Telegraf…&lt;/p&gt;
+
+&lt;h2 id=&quot;installing-telegraf&quot;&gt;Installing Telegraf&lt;/h2&gt;
+
+&lt;p&gt;Telegraf is a utility that can automatically capture and stream messages into InfluxDB (and other systems), which we’re using as the data storage system on the Repository.&lt;/p&gt;
+
+&lt;p&gt;I’m running Telegraf on both my Gateway and Repository to collect server metrics (disk, diskio, memory, etc) about each system and stream them into InfluxDB. This allows me to monitor the brain of my smart home, and even include it in Node RED based workflows for managing my setup.&lt;/p&gt;
+
+&lt;p&gt;As an ARM-based system, the installation process for Telegraf on the Pi is a bit different than other Debian-based systems.&lt;/p&gt;
+
+&lt;p&gt;Assuming you installed InfluxDB first, you can jump right ahead to pulling the source down building it with Go. 
+If you’ve not yet installed Go, walk through those instructions in the InfluxDB section first.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Grab the telegraf source&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; go get github.com/influxdata/telegraf
+ cd $GOPATH/src/github.com/influxdata/telegraf
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Run the &lt;code class=&quot;highlighter-rouge&quot;&gt;make&lt;/code&gt; command and watch the magic happen&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;That was easy right? No idea why Influx isn’t as simple, considering both are from the folks at InfluxData.&lt;/p&gt;
+
+&lt;h2 id=&quot;installing-grafana&quot;&gt;Installing Grafana&lt;/h2&gt;
+
+&lt;p&gt;Now that we have InfluxDB and Telegraf set-up, let’s get Grafana installed for some world-class dashboards!&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Start by making sure that you have Node 4 or later installed.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; wget https://nodejs.org/dist/v4.0.0/node-v4.0.0-linux-armv7l.tar.gz
+ tar -xvf node-v4.0.0-linux-armv7l.tar.gz
+ cd node-v4.0.0-linux-armv7l
+ cp -R * /usr/local
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;As with before, if you’ve already installed InfluxDB and Telegraf, you should have Go and can grab the source. 
+ If you’ve not yet installed Go, walk through those instructions in the InfluxDB section first.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Grab the Grafana source&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; go get github.com/grafana/grafana
+ cd $GOPATH/src/github.com/grafana/grafana
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Run the setup script&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; go run build.go setup
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Grafana uses node and has a ton of dependencies. Let’s install those now:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo npm install node-gyp
+ sudo npm install -f
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;Make sure to use the &lt;code class=&quot;highlighter-rouge&quot;&gt;-f&lt;/code&gt; flag to bypass issues with installing PhantomJS on ARM-based systems.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Install Grunt&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo npm install -g grunt-cli
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;To bypass an &lt;a href=&quot;https://github.com/grafana/grafana/issues/2683&quot;&gt;issue with PhantomJS&lt;/a&gt; (again), you’ll need to make a change to the &lt;code class=&quot;highlighter-rouge&quot;&gt;build.go&lt;/code&gt; file&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo vi build.go
+  
+ Go to line 76 (`:76`) and modify the line to include a `force` flag
+
+ grunt(&quot;--force&quot;, release);
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Run the build script again. There will be warnings, but it should complete and place a &lt;code class=&quot;highlighter-rouge&quot;&gt;.deb&lt;/code&gt; file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;dist&lt;/code&gt; folder&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; go run build.go build pkg-deb
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Now install the package. Note that the exact name of your Debian package might be different from mine:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo dpkg -i dist/grafana_4.0.0-1468683150pre1_armhf.deb
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Open a browser and navigate to port &lt;code class=&quot;highlighter-rouge&quot;&gt;3000&lt;/code&gt; on your Pi and you should see the Garfana login screen.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/post-images/grafana.png&quot; alt=&quot;Grafana Login&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;auto-starting-services&quot;&gt;Auto-starting services&lt;/h2&gt;
+
+&lt;p&gt;Once you’ve installed everything, you’ll no-doubt want to set up your services to auto-start on a reboot. 
+This will save you time each time you power-cycle your devices. 
+What’s more, having your services managed by &lt;code class=&quot;highlighter-rouge&quot;&gt;systemd&lt;/code&gt; will allow you to restart and shut them down without jumping through hoops.&lt;/p&gt;
+
+&lt;h3 id=&quot;auto-starting-influxdb&quot;&gt;Auto-starting InfluxDB&lt;/h3&gt;
+
+&lt;p&gt;After you install InfluxDB, you should have a file called &lt;code class=&quot;highlighter-rouge&quot;&gt;influxdb.service&lt;/code&gt; in the &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/systemd/system&lt;/code&gt; folder on your Pi.&lt;/p&gt;
+
+&lt;p&gt;If this file &lt;em&gt;does&lt;/em&gt; exist, you simply need to modify the &lt;code class=&quot;highlighter-rouge&quot;&gt;User&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Group&lt;/code&gt; settings on line 9 and 10 to the appropriate user and group (aka the user under which you installed InfluxDB).&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;If this file &lt;em&gt;doesn’t&lt;/em&gt; exist, you’ll need to create it:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; cd /etc/systemd/system/
+ touch influxdb.service
+ vi influxdb.service
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Then copy the service file from the &lt;a href=&quot;https://github.com/influxdata/influxdb/blob/master/scripts/influxdb.service&quot;&gt;InfluxDB repository here&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Modify the &lt;code class=&quot;highlighter-rouge&quot;&gt;User&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Group&lt;/code&gt; settings on line 9 and 10 to the appropriate user and group (aka the user under which you installed InfluxDB).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Now reload the systemd daemon and enable InfluxDB:&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo systemctl daemon-reload
+ sudo systemctl enable influxdb
+ sudo systemctl start influxdb
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;auto-starting-telegraf&quot;&gt;Auto-starting Telegraf&lt;/h3&gt;
+
+&lt;p&gt;Unlike InfluxDB, Telegraf didn’t put a &lt;code class=&quot;highlighter-rouge&quot;&gt;service&lt;/code&gt; file in my &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/systemd/system&lt;/code&gt; folder, so I added one myself:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Crete the file&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; cd /etc/systemd/system
+ touch telegraf.service
+ vi telegraf.service
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Copy the service file from the &lt;a href=&quot;https://github.com/influxdata/telegraf/blob/master/scripts/telegraf.service&quot;&gt;Telegraf repository&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Change the &lt;code class=&quot;highlighter-rouge&quot;&gt;user&lt;/code&gt; setting on line 8 to the appropriate user.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Determine where telegraf is installed on your system and copy the result.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; which telegraf
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;For my installation, it was &lt;code class=&quot;highlighter-rouge&quot;&gt;/home/pi/.gvm/pkgsets/go1.6.2/global/bin/telegraf&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Modify the path to the &lt;code class=&quot;highlighter-rouge&quot;&gt;telegraf&lt;/code&gt; command on line 11 to the correct location of your telegraf installer.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create a &lt;code class=&quot;highlighter-rouge&quot;&gt;telegraf&lt;/code&gt; directory in &lt;code class=&quot;highlighter-rouge&quot;&gt;etc/default&lt;/code&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo touch /etc/default/telegraf
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Reload the systemd daemon and enable InfluxDB&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo systemctl daemon-reload
+ sudo systemctl enable telegraf
+ sudo systemctl start telegraf
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;auto-starting-grafana&quot;&gt;Auto-starting Grafana&lt;/h3&gt;
+
+&lt;p&gt;Auto-starting Grafana is the simpliest of all&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    sudo systemctl daemon-reload
+    sudo systemctl enable grafana-server
+    sudo sysatemctl start grafana-server
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And you’re done. You Repository and Gateway are ready for you to use to automate your home! In a future post, I’ll help you get started with node-red, setup dashboards and more!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 14 Aug 2016 13:35:00 -0500</pubDate>
+        <link>breakingthings.io/posts/smart-home-controller-part1</link>
+        <guid isPermaLink="true">breakingthings.io/posts/smart-home-controller-part1</guid>
         
         <category>smart-home</category>
         
