@@ -7,9 +7,69 @@
 An aspiring and self-described maker, Brandon typically writes about the topics capturing his interest and consuming too much of his time, from software &amp; micro-controllers, to CNC milling &amp; prototyping hardware. Pretty much anything and everything Brandon uncovers on his journey to break things in the process of creating something new.</description>
     <link>breakingthings.io/</link>
     <atom:link href="breakingthings.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 20 Aug 2016 01:14:58 -0500</pubDate>
-    <lastBuildDate>Sat, 20 Aug 2016 01:14:58 -0500</lastBuildDate>
+    <pubDate>Thu, 25 Aug 2016 10:48:32 -0500</pubDate>
+    <lastBuildDate>Thu, 25 Aug 2016 10:48:32 -0500</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Smart Home, Dumb Home, Ignorant Home</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Stupidity has a certain charm—ignorance does not. - Frank Zappa&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In an increasingly connected world, much of our attention seems to be drawn to the real of “intelligence.” Not so much in humanity, but in the increasing intelligence of “things” around us. “Smart Homes,” “Smart Cities,” “Smart Cars,” “Smart Buildings,” and “Smart watches” are all terms that have seen increased usage over the last decade, and a sharp increase over the last few years.&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://ssl.gstatic.com/trends_nrtr/680_RC25/embed_loader.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt; trends.embed.renderExploreWidget(&quot;TIMESERIES&quot;, {&quot;comparisonItem&quot;:[{&quot;keyword&quot;:&quot;smart city&quot;,&quot;geo&quot;:&quot;&quot;,&quot;time&quot;:&quot;today 5-y&quot;},{&quot;keyword&quot;:&quot;smart home&quot;,&quot;geo&quot;:&quot;&quot;,&quot;time&quot;:&quot;today 5-y&quot;},{&quot;keyword&quot;:&quot;smart car&quot;,&quot;geo&quot;:&quot;&quot;,&quot;time&quot;:&quot;today 5-y&quot;},{&quot;keyword&quot;:&quot;smart building&quot;,&quot;geo&quot;:&quot;&quot;,&quot;time&quot;:&quot;today 5-y&quot;}],&quot;category&quot;:0,&quot;property&quot;:&quot;&quot;}, {}); 
+&lt;/script&gt;
+
+&lt;p&gt;In the midst of all of this attention, there seems to be less critical thought about what imbues “intelligence” on these things in the first place. To many, a “smart thing” is a normal thing with a set of sensors (and possibly actuators) that can tell you about the thing, read the environment around the thing, and potentially control the thing. The thing is invariably connected to a network, meaning that it can communicate with the outside world, and the outside world with it.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, to be a “dumb thing” is to possess none of this ability to sense, communicate and control beyond the thing itself. A “dumb thing” is a closed system, useful only in analog and forever the scorn of its owners, who’d rather not get up and walk across the room to turn on the coffee pot.&lt;/p&gt;
+
+&lt;p&gt;And while this distraction between dumb and smart, connected and disconnected things works for broad journalistic narrative, it masks the non-binary reality of the so called “Internet of Things” and papers over the increasing unease people, especially non-technical consumers, feel about inviting into their lives devices that provide an open door to the outside world.&lt;/p&gt;
+
+&lt;p&gt;This is especially true in the realm of the “smart home,” where a never-ending litany of…&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;** Include something about intelligence in nature as a parallel here. Things in nature can communicate in a way that we might not be able to understand, but they still communicate. Things in nature have defense mechanisms, our smart things should as well **&lt;/em&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 24 Aug 2016 19:35:00 -0500</pubDate>
+        <link>breakingthings.io/posts/ignorance</link>
+        <guid isPermaLink="true">breakingthings.io/posts/ignorance</guid>
+        
+        <category>connected home</category>
+        
+        <category>IoT</category>
+        
+        <category>home automation</category>
+        
+        <category>automated ignorance</category>
+        
+        
+        <category>smart-home</category>
+        
+      </item>
+    
+      <item>
+        <title>EPCOT, Planned Obsolescence and the Smart Home of the Future</title>
+        <description>
+</description>
+        <pubDate>Sat, 20 Aug 2016 13:35:00 -0500</pubDate>
+        <link>breakingthings.io/posts/epcot</link>
+        <guid isPermaLink="true">breakingthings.io/posts/epcot</guid>
+        
+        <category>connected home</category>
+        
+        <category>IoT</category>
+        
+        <category>home automation</category>
+        
+        <category>planned obsolescence</category>
+        
+        
+        <category>smart-home</category>
+        
+      </item>
     
       <item>
         <title>Building Your Own Smart Home Controller - Part 2, The Gateway</title>
