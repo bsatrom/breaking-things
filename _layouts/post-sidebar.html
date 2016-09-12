@@ -26,7 +26,7 @@ comments: true
 
         <div class="col-xs-12 col-md-3 col-md-offset-1 single-content-sidebar-area">
 
-            <img src='{{ "img/" | append: page.author_avatar | prepend: site.baseurl }}.jpg' class="user-icon " alt="user-image">
+            <img src='{{ "url({{ site.baseurl }}/img/" | append: page.author_avatar | prepend: site.baseurl }}.jpg' class="user-icon " alt="user-image">
             <div class="meta">
 
                 <div class="sidebar-info">
