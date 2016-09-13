@@ -7,9 +7,176 @@
 An aspiring and self-described maker, Brandon typically writes about the topics capturing his interest and consuming too much of his time, from software &amp; micro-controllers, to CNC milling &amp; prototyping hardware. Pretty much anything and everything Brandon uncovers on his journey to break things in the process of creating something new.</description>
     <link>breakingthings.io/</link>
     <atom:link href="breakingthings.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 12 Sep 2016 06:26:00 -0500</pubDate>
-    <lastBuildDate>Mon, 12 Sep 2016 06:26:00 -0500</lastBuildDate>
+    <pubDate>Tue, 13 Sep 2016 08:53:36 -0500</pubDate>
+    <lastBuildDate>Tue, 13 Sep 2016 08:53:36 -0500</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>From Idea to Prototype</title>
+        <description>&lt;p&gt;For the last several months, I’ve been working on a project I’m calling the “Brew Buddy.” It’s a simple electronics setup that helps manage the homebrewing process from first boil to wort cooldown. The rig contains a &lt;a href=&quot;https://www.particle.io/products/hardware/photon-wifi-dev-kit&quot;&gt;Particle Photon&lt;/a&gt;, a &lt;a href=&quot;https://www.adafruit.com/product/1480&quot;&gt;2.2in TFT from Adafruit&lt;/a&gt; and, in the latest iteration, a &lt;a href=&quot;https://www.sparkfun.com/products/13715&quot;&gt;Type-K Thermocouple&lt;/a&gt; and &lt;a href=&quot;https://www.sparkfun.com/products/13266&quot;&gt;breakout board&lt;/a&gt; from SparkFun. The thermocouple monitors wort temperature throughout the process, and the TFT display shows the current temp, current phase, total time and a rudimentary “dot chart” of the last several temperature readings.&lt;/p&gt;
+
+&lt;p&gt;I designed the PCB for the Brew Buddy in &lt;a href=&quot;https://cadsoft.io/&quot;&gt;Eagle&lt;/a&gt; and milled it on the &lt;a href=&quot;https://othermachine.co/&quot;&gt;Othermill&lt;/a&gt;, an amazing desktop CNC mill.&lt;/p&gt;
+
+&lt;p&gt;Brew Buddy is still very much a work in progress, but I wanted to share a video I put together (with my GoPro and the help of &lt;a href=&quot;http://www.adobe.com/products/premiere.html&quot;&gt;Adobe Premiere Pro&lt;/a&gt;) that covers some of my latest design changes, milling on the Othermill and final soldering and assembly. Check it out below, feel free to throw a comment here or over at YouTube and, if you like it, subscribe to &lt;a href=&quot;https://www.youtube.com/channel/UCAS6I-NFh25eBhwMX2KCxqQ&quot;&gt;my YouTube channel&lt;/a&gt;.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/4iv2FxeRwPA&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Next up for the Brew Buddy, I plan to design and 3D print a custom enclosure. Stay tuned here for a follow-up video on that process, as well as some additional info about the mobile app I’m creating to control the setup.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 12 Sep 2016 10:35:00 -0500</pubDate>
+        <link>breakingthings.io/posts/idea-to-prototype</link>
+        <guid isPermaLink="true">breakingthings.io/posts/idea-to-prototype</guid>
+        
+        <category>othermill</category>
+        
+        <category>PCB Design</category>
+        
+        <category>eagle</category>
+        
+        <category>electronics</category>
+        
+        <category>maker</category>
+        
+        
+        <category>making</category>
+        
+      </item>
+    
+      <item>
+        <title>Smart Home, Dumb Home, Ignorant Home</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Stupidity has a certain charm. Ignorance does not. - Frank Zappa&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In an increasingly connected world, much of our attention seems to be drawn to the realm of “intelligence.” Not so much in humanity, but in the increasing intelligence of “things” around us. “Smart Homes,” “Smart Cities,” “Smart Cars,” “Smart Buildings,” and “Smart watches” are all terms that have seen increased usage over the last decade, and a sharp increase over the last few years. Our vision of the future is to make everything around us “smart,” ostensibly in an effort to make ourselves smarter.&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://ssl.gstatic.com/trends_nrtr/680_RC25/embed_loader.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt; trends.embed.renderExploreWidget(&quot;TIMESERIES&quot;, {&quot;comparisonItem&quot;:[{&quot;keyword&quot;:&quot;smart city&quot;,&quot;geo&quot;:&quot;&quot;,&quot;time&quot;:&quot;today 5-y&quot;},{&quot;keyword&quot;:&quot;smart home&quot;,&quot;geo&quot;:&quot;&quot;,&quot;time&quot;:&quot;today 5-y&quot;},{&quot;keyword&quot;:&quot;smart car&quot;,&quot;geo&quot;:&quot;&quot;,&quot;time&quot;:&quot;today 5-y&quot;},{&quot;keyword&quot;:&quot;smart building&quot;,&quot;geo&quot;:&quot;&quot;,&quot;time&quot;:&quot;today 5-y&quot;}],&quot;category&quot;:0,&quot;property&quot;:&quot;&quot;}, {}); 
+&lt;/script&gt;
+
+&lt;p&gt;In the midst of all of this attention, there seems to be less critical thought about what imbues “intelligence” on these things in the first place. The idea that a “smart thing” is a normal thing with a set of sensors (and possibly actuators) that can tell you about the thing, read the environment around the thing, and potentially control the thing is generally accepted. The thing in question is invariably connected to a network, meaning that it can communicate with the outside world, and the outside world with it.&lt;/p&gt;
+
+&lt;p&gt;Putting it another way, &lt;em&gt;sensing plus connectivity is “smart”&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;On the flip side, to be a “dumb thing” is to possess none of this ability to sense, communicate and control beyond the thing itself. A “dumb thing” is a closed system, useful only in analog and forever the scorn of its owners, who’d rather not get up and walk across the room to turn on the coffee pot.&lt;/p&gt;
+
+&lt;p&gt;Putting it another way &lt;em&gt;the absence of connectivity, sensing or not, is “dumb”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;And while this distinction between smart and dumb, connected and disconnected things works for broad journalistic narrative, it masks the non-binary reality of the so called “Internet of Things.” It also papers over the increasing unease people–especially non-technical consumers–feel about acquiring devices that provide an open door to the world around them.&lt;/p&gt;
+
+&lt;p&gt;This is especially true in the realm of the “smart home,” where a never-ending litany of connected devices are finding their way into the homes of many, from lightbulbs to thermostats; coffee pots to refrigerators; garage door openers to sprinkler systems. According to the narrative, these things are inherently good for consumers because they are “smart.”&lt;/p&gt;
+
+&lt;p&gt;But beneath this binary narrative, a more sinister truth lurks: many of these devices are something worse than dumb: they are ignorant. And ignorance is dangerous.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-ignorant-home-defined&quot;&gt;The “Ignorant Home,” Defined&lt;/h2&gt;
+
+&lt;p&gt;The idea of “ignorant devices” and “ignorant homes” isn’t commonly used that I’ve seen, but should be part of the narrative around smart home technologies. By “ignorance,” I don’t mean that a device cannot sense or isn’t connected. Rather, an ignorant device is one that is:&lt;/p&gt;
+
+&lt;p&gt;A) Unaware of the connected home around it and/or unable to communicate with that home;
+B) Unable to function when its communication mechanisms fail;
+C) Unable to defend itself against external attacks;&lt;/p&gt;
+
+&lt;p&gt;If the device or devices in your home exhibit any of these qualities, it would be better for them to be just plain dumb. To be sure, the devices in these categories border on dangerous.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-unaware-device&quot;&gt;The Unaware Device&lt;/h3&gt;
+
+&lt;p&gt;Imagine your home has a slew of the latest smart devices. You have a Nest thermostat, two Nest cameras, a Ring video doorbell, a smattering of Hue lightbulbs, an August door lock and some WeMo plugs in your kitchen so you can start the coffee maker and  auto-toast an English Muffin each morning. This is a fine setup, and one that many folks on the bleeding edge of smart homes have, until it comes time to actually do something with those devices.&lt;/p&gt;
+
+&lt;p&gt;First and foremost, controlling the devices above—which are peddled by five different manufacturers—requires five different mobile apps, all of which have their own User Experience, their own workflows and their own ways of orchestrating devices. Some of these apps, like the Hue app, are so convoluted in how they manage scenes that the simple act of adding another device from the same manufacturer to an existing scene or workflow is painful. Try adding new Hue bulbs to an existing scene if you want to feel the pain yourself.&lt;/p&gt;
+
+&lt;p&gt;And if you want to create scenes that tie multiple devices together? Maybe you want to say “Goodnight, sweet home” and have your living room lights turned off, the front door dead-bolted and the entryway Nest cam activated? Good luck. If you’ve managed to grab devices for which the manufactures have entered into some kind of partnership agreement, you might discover a light integration, but you’re unlikely to find this among all your devices. What’s more, even where integrations do exist, you’re stuck awkwardly using them via another manufacturer’s app.&lt;/p&gt;
+
+&lt;p&gt;The devices that fall into this category are ignorant because they are unaware that they are not alone in the smart home. They have no concept of other devices and other applications, only that they themselves exist, they are connected and that they perform some kind of function. It’s digital solipsism at its best.&lt;/p&gt;
+
+&lt;p&gt;Even worse, many of these devices are often ignorant that they are &lt;em&gt;in&lt;/em&gt; a home to begin with. While these devices are on your local subnet, they communicate almost exclusively with a public cloud maintained by their manufacturer. Most of these devices provide no way to interface with them on the local network; it’s cloud or bust. Even when you’re controlling the device from your phone, you’re doing so through the public cloud and not your local network. And if you’re controlling a lightbulb in your home, but you have to go through the cloud to do it, is the bulb really on your network, or is your home just an extension of the public cloud?&lt;/p&gt;
+
+&lt;h3 id=&quot;the-non-functional-device&quot;&gt;The Non-Functional Device&lt;/h3&gt;
+
+&lt;p&gt;The second type of ignorance stems from the role that the cloud plays in the lives of many of these devices. Many connected devices have a cloud component to them, from door locks to thermostats and beyond. Benefits of this connection include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The vendor can make it easier for you to get the device running in your home without having a central smart home controller;&lt;/li&gt;
+  &lt;li&gt;The vendor can push updates to the device with little to no intervention from the consumer;&lt;/li&gt;
+  &lt;li&gt;The consumer can control the device when they are away from home.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These are all great benefits that have allowed smart home devices to proliferate faster than related technologies of the past (like X10), but they also come with a few serious, related drawbacks to being cloud connected:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If you can reach into your home and control the device from the cloud, in theory, anyone else can, too.&lt;/li&gt;
+  &lt;li&gt;If the device is cloud-dependent, it may stop functioning when your home network or the vendor’s cloud goes down.&lt;/li&gt;
+  &lt;li&gt;The vendor can reach into your home and render the device non-functional.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We’ll touch on the first drawback in the next section, but for now let’s cover the last two.&lt;/p&gt;
+
+&lt;p&gt;Cloud connectedness is a virtue, cloud dependency a vice. The benefits of a cloud connection quickly turn sour when a device actually must have a cloud connection to function or when that connection can easily render the device useless. Consider the &lt;a href=&quot;http://ring.com&quot;&gt;Ring&lt;/a&gt; doorbell. I have one of these devices next to my front door, as well as a Ring Chime in my entryway. The purpose of the chime is to replicate the function of an old-school doorbell chime, which goes off inside the house when the outside button is pushed.&lt;/p&gt;
+
+&lt;p&gt;It’s a great concept, in theory, except for the fact that the Ring Doorbell and the Ring Chime in my home don’t communicate directly with each other, rather through Ring’s central, managed cloud. If my home network drops or the cloud goes down, not only do I &lt;em&gt;not&lt;/em&gt; get notifications on my phone, but the Chime is completely non-functional.&lt;/p&gt;
+
+&lt;p&gt;The example of the Ring doorbell illustrates the issue with cloud dependency, but the use case is little more than an minor annoyance. This case, when applied to other, more critical smart home devices, however, can lead to more severe consequences.&lt;/p&gt;
+
+&lt;p&gt;Take the Nest Thermostat, for instance, a device considered to be a vanguard of the smart home era. The Nest is a clever, beautiful little device, but is also very cloud dependent. In just January of 2016, Nest &lt;a href=&quot;https://thestack.com/iot/2016/01/14/nest-thermostat-bug-leaves-owners-without-heating/&quot;&gt;pushed an update&lt;/a&gt; to its thermostats that included a bug which rendered the devices (and home thermostats) completely non-functional. In January. In a large part of the midwest United States.&lt;/p&gt;
+
+&lt;p&gt;Think about it, because of the central role of the cloud in the life of this devices, thousands of people were left without heat in the dead of Winter. It’s one thing to miss the FedEx driver when he drops off a package. Quite another to not be able to control your perfectly functional furnace when it’s ten below outside.&lt;/p&gt;
+
+&lt;p&gt;Another, more seditious reality lies in the second point, and frankly is a subject for further explanation in a full post, but I’ll touch on it here. That is the cloud allowing the device vendor to render your device non-functional. One recent example of this occurred earlier this year with the Revolv smart home hub. Revolv was acquired by Nest in 2014 and was considered to be a very capable smart home controller, a device which is meant to solve the problem of disconnected, ignorant devices by installing a piece of hardware that unifies those devices and centrally manages your home.&lt;/p&gt;
+
+&lt;p&gt;Revolv was a solid device in the space and while not wildly successful, it did show promise. That is, until &lt;a href=&quot;https://thestack.com/iot/2016/01/14/nest-thermostat-bug-leaves-owners-without-heating/&quot;&gt;Google shut it down unceremoniously&lt;/a&gt; in March of this year. What was even more notable, however, was not that Google shut down the service. These things happen all the time, especially at Google. The notable tidbit here is that, in the process of shutting down the Revolv, they rendered each and every purchased Revolv device totally and 100% non-functional. They couldn’t even be used to turn on a light bulb once Google shut things down. The same cloud dependency that allowed the Revolv scale and easily manage homes was used to reach into the homes of each and every owner and render their homes instantly dumber.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-partner=&quot;tweetdeck&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Holy fucking shit. &lt;a href=&quot;https://twitter.com/nest&quot;&gt;@nest&lt;/a&gt; smoke alarm malfunctions in the middle of the night, can&amp;#39;t be silenced. No reason. Now no smoke alarm.&lt;/p&gt;&amp;mdash; Ken MacInnis (@kcm) &lt;a href=&quot;https://twitter.com/kcm/status/765449955389517824&quot;&gt;August 16, 2016&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;The cloud is a great boon to the smart home, but it comes with tradeoffs (and risks, which we’ll discuss next). To really step out of the realm of ignorance into enlightenment, smart device vendors &lt;em&gt;must&lt;/em&gt; ensure that being “cloud connected” doesn’t turn into “cloud dependent.”&lt;/p&gt;
+
+&lt;h3 id=&quot;the-defenseless-device&quot;&gt;The Defenseless Device&lt;/h3&gt;
+
+&lt;p&gt;While being unaware and cloud-dependence range from the annoying to the downright frustrating, there is another aspect to ignorance that is altogether more dangerous. That is, when devices that can make your home less safe, and even be used against you.&lt;/p&gt;
+
+&lt;p&gt;This is somewhat an extension of the last type of device, but, in this case, is about devices that—through their cloud connection—can be taken over by malicious 3rd parties for a seditious purpose. By even allowing these devices into your home, you’re creating an attack vector that can literally provide malicious actors with the keys to your home.&lt;/p&gt;
+
+&lt;p&gt;One notable example of this type of exploit was &lt;a href=&quot;http://mashable.com/2016/05/02/smartthings-hack/#cL.Ys9SDDPqQ&quot;&gt;unveiled earlier this year&lt;/a&gt; by security researchers at the University of Michigan. Using the popular &lt;a href=&quot;https://www.smartthings.com/&quot;&gt;Samsung SmartThings&lt;/a&gt; system—another smart home controller designed to coordinate your home’s various devices—these individuals were able to install an app in the SmartThings marketplace that logged pin code changes for smart door locks and sent those codes via SMS to the attacker. With these codes, an attacker can install his or her own secret codes and waltz right into your home, anytime. This is possible because SmartThings has an exploit that allow over-privileged apps—that is, apps that claim they are doing something simple, like checking the battery status on a device, but which do more than the end-user allows for—to be installed from the SmartThings marketplace. Unlike the heavily curated marketplaces that exist for mobile devices today, many of the home automation marketplaces are so nascent and unproven as to be markedly unsafe.&lt;/p&gt;
+
+&lt;p&gt;Another example &lt;a href=&quot;http://motherboard.vice.com/read/internet-of-things-ransomware-smart-thermostat&quot;&gt;popped up&lt;/a&gt; in August of this year, and is just as frightening. In this case, security researchers were able to take control of a connected thermostat (they didn’t say which brand) and install a piece of ransomware on the device. For those not familiar with the term, ransomware is the term for a piece of malicious software that essentially “locks up” your device until you pay the attacker to remove the lock. Historically, this has been used to render personal computers unusable. In this case, researchers were able to run an exploit on a connected thermostat in a similar fashion, displaying a “pay or else” message and then rendering the thermostat inoperable.&lt;/p&gt;
+
+&lt;p&gt;This is serious and should sound frightening. Imagine someone taking over your thermostat and setting the temperature to 99 degrees in August and insisting you pay money to be able to cool your own home again.&lt;/p&gt;
+
+&lt;p&gt;The fact is, the “smart home” space is still young, and while “home automation” has been around for a while, it’s never had this volume of interest, and has never been so connected to the outside world. Vendors in this space are still figuring out how to secure their devices, and thus, your home, but they are doing so as they rush to take part in the in-progress smart home land grab. This is all well and good, but safety and security are not areas for extensive field testing. It is our responsibility as consumers to not only pay critical attention to the security features of our devices, but to push the vendors we buy from to make security a priority, not a nice to have feature.&lt;/p&gt;
+
+&lt;h2 id=&quot;avoiding-the-ignorant-home&quot;&gt;Avoiding the Ignorant Home&lt;/h2&gt;
+
+&lt;p&gt;At this point, you’re probably reading this and thinking &lt;em&gt;why would I ever buy even a connected lightbulb again?&lt;/em&gt; But in spite of the critical nature of this post, I am actually quite bullish on the smart home. My concern stems from the fact that we’re sitting at a critical inflection point where smart home technologies will &lt;em&gt;never&lt;/em&gt; reach mass adoption if the purveyors of those devices don’t get their collective acts together and purge ignorance from their ecosystems.&lt;/p&gt;
+
+&lt;p&gt;As consumers and end-users of these devices, the best way that we can ensure that device vendors focus their attention on creating safe and secure devices is to push them to do so via our buying behavior. Avoid devices that have a history of known-issues, as well as devices that require a cloud connection to function. If you don’t know, do some research, and ask online, especially if you’re shopping via Amazon, where questions can be a powerful influencer for others considering a device. The bottom line is this: only you have the safety of your home in mind, so be aggressive and look for devices that co-exist well on your network, that integrate with others and that are inherently well-protected.&lt;/p&gt;
+
+&lt;p&gt;Beyond the practical things you and I can do to keep our homes safe and smart, device vendors can move themselves towards building more safe and secure (and intelligent) ecosystems by taking a few lessons from nature.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-smart-home-and-natural-intelligence&quot;&gt;The Smart Home and &lt;em&gt;Natural&lt;/em&gt; Intelligence&lt;/h2&gt;
+
+&lt;p&gt;In the real world, that is the dumb, disconnected natural world around us, “intelligence” means survival, and the vast majority of creatures, including humans, have learned to survive through &lt;em&gt;community&lt;/em&gt; and &lt;em&gt;security.&lt;/em&gt; Creatures unaware of external threats, or unable to defend themselves, quickly die out, as do those that live “apart from the pack” and attempt to survive alone.&lt;/p&gt;
+
+&lt;p&gt;As the number of connected devices in our homes and around us proliferates–growing into the trillions in the coming years–we’d be wise to view these devices as part of an electronic ecology, instead of merely bits of connected silicon in our environment. With this as our guidance, we should expect that &lt;em&gt;communal&lt;/em&gt;, &lt;em&gt;adaptable&lt;/em&gt; and &lt;em&gt;secure&lt;/em&gt; devices would rise to the top and stand as the best devices for our homes. I’ll share more about what I think this means in next post in this series.&lt;/p&gt;
+
+&lt;p&gt;As we build our own ecologies and ecosystems in our homes, buildings and cities, we’d be wise to apply the same principles: For devices to be truly intelligent–and for our homes to inherit the same qualities–they must be communal, they must be able to adapt and they must be secure. Anything else isn’t just dumb, it’s dangerous.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 12 Sep 2016 10:35:00 -0500</pubDate>
+        <link>breakingthings.io/posts/ignorance</link>
+        <guid isPermaLink="true">breakingthings.io/posts/ignorance</guid>
+        
+        <category>connected home</category>
+        
+        <category>IoT</category>
+        
+        <category>home automation</category>
+        
+        <category>automated ignorance</category>
+        
+        <category>terminology</category>
+        
+        
+        <category>smart-home</category>
+        
+      </item>
     
       <item>
         <title>Building Your Own Smart Home Controller - Part 2, The Gateway</title>
