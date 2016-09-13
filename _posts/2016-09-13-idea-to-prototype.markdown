@@ -1,6 +1,6 @@
 ---
 title: From Idea to Prototype
-date: 2016-09-13 9:35:00 -05:00
+date: 2016-09-13 09:35:00 -05:00
 permalink: "/posts/idea-to-prototype"
 categories:
 - making
