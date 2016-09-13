@@ -3,7 +3,7 @@ title: Smart Home, Dumb Home, Ignorant Home
 date: 2016-09-12 10:35:00 -05:00
 permalink: "/posts/ignorance"
 categories:
-- smart-home
+- smarthome
 tags:
 - connected home
 - IoT

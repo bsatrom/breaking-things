@@ -3,7 +3,7 @@ title: Building Your Own Smart Home Controller - Part 2, The Gateway
 date: 2016-08-15 13:35:00 -05:00
 permalink: "/posts/smart-home-controller-part2"
 categories:
-- smart-home
+- smarthome
 tags:
 - smart-home
 - home-controller

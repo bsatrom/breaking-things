@@ -3,7 +3,7 @@ title: Building Your Own Smart Home Controller - Part 1, The Repository
 date: 2016-08-14 13:35:00 -05:00
 permalink: "/posts/smart-home-controller-part1"
 categories:
-- smart-home
+- smarthome
 tags:
 - smart-home
 - home-controller
