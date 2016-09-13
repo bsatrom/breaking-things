@@ -10,6 +10,7 @@ tags:
 - kids
 - education
 layout: post-sidebar
+comments: true
 author_name: Brandon Satrom
 author_url: "/author/brandon"
 author_avatar: brandon
