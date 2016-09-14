@@ -7,9 +7,40 @@
 An aspiring and self-described maker, Brandon typically writes about the topics capturing his interest and consuming too much of his time, from software &amp; micro-controllers, to CNC milling &amp; prototyping hardware. Pretty much anything and everything Brandon uncovers on his journey to break things in the process of creating something new.</description>
     <link>breakingthings.io/</link>
     <atom:link href="breakingthings.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 13 Sep 2016 09:07:10 -0500</pubDate>
-    <lastBuildDate>Tue, 13 Sep 2016 09:07:10 -0500</lastBuildDate>
+    <pubDate>Wed, 14 Sep 2016 06:51:16 -0500</pubDate>
+    <lastBuildDate>Wed, 14 Sep 2016 06:51:16 -0500</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>From Idea to Prototype</title>
+        <description>&lt;p&gt;For the last several months, I’ve been working on a project I’m calling the “Brew Buddy.” It’s a simple electronics setup that helps manage the homebrewing process from first boil to wort cooldown. The rig contains a &lt;a href=&quot;https://www.particle.io/products/hardware/photon-wifi-dev-kit&quot;&gt;Particle Photon&lt;/a&gt;, a &lt;a href=&quot;https://www.adafruit.com/product/1480&quot;&gt;2.2in TFT from Adafruit&lt;/a&gt; and, in the latest iteration, a &lt;a href=&quot;https://www.sparkfun.com/products/13715&quot;&gt;Type-K Thermocouple&lt;/a&gt; and &lt;a href=&quot;https://www.sparkfun.com/products/13266&quot;&gt;breakout board&lt;/a&gt; from SparkFun. The thermocouple monitors wort temperature throughout the process, and the TFT display shows the current temp, current phase, total time and a rudimentary “dot chart” of the last several temperature readings.&lt;/p&gt;
+
+&lt;p&gt;I designed the PCB for the Brew Buddy in &lt;a href=&quot;https://cadsoft.io/&quot;&gt;Eagle&lt;/a&gt; and milled it on the &lt;a href=&quot;https://othermachine.co/&quot;&gt;Othermill&lt;/a&gt;, an amazing desktop CNC mill.&lt;/p&gt;
+
+&lt;p&gt;Brew Buddy is still very much a work in progress, but I wanted to share a video I put together (with my GoPro and the help of &lt;a href=&quot;http://www.adobe.com/products/premiere.html&quot;&gt;Adobe Premiere Pro&lt;/a&gt;) that covers some of my latest design changes, milling on the Othermill and final soldering and assembly. Check it out below, feel free to throw a comment here or over at YouTube and, if you like it, subscribe to &lt;a href=&quot;https://www.youtube.com/channel/UCAS6I-NFh25eBhwMX2KCxqQ&quot;&gt;my YouTube channel&lt;/a&gt;.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/4iv2FxeRwPA&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Next up for the Brew Buddy, I plan to design and 3D print a custom enclosure. Stay tuned here for a follow-up video on that process, as well as some additional info about the mobile app I’m creating to control the setup.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 13 Sep 2016 09:35:00 -0500</pubDate>
+        <link>breakingthings.io/posts/idea-to-prototype</link>
+        <guid isPermaLink="true">breakingthings.io/posts/idea-to-prototype</guid>
+        
+        <category>othermill</category>
+        
+        <category>PCB Design</category>
+        
+        <category>eagle</category>
+        
+        <category>electronics</category>
+        
+        <category>maker</category>
+        
+        
+        <category>making</category>
+        
+      </item>
     
       <item>
         <title>Smart Home, Dumb Home, Ignorant Home</title>
